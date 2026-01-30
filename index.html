@@ -209,6 +209,15 @@
     </aside>
 
     <script src="script.js"></script>
+    <script>
+  // Registra o PWA
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./service-worker.js')
+      .then(() => console.log('Lux VTT PWA Registrado!'))
+      .catch((err) => console.log('Erro PWA:', err));
+  }
+</script>
 </body>
 </html>
+
 
